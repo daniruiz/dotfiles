@@ -24,7 +24,11 @@ export SAVEHIST=5000
 
 source /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme
 
+unsetopt NO_BEEP
 setopt AUTO_CD
+setopt BEEP
+setopt NOMATCH
+setopt NOTIFY
 setopt INC_APPEND_HISTORY
 setopt SHARE_HISTORY
 setopt HIST_EXPIRE_DUPS_FIRST
@@ -34,6 +38,7 @@ setopt HIST_FIND_NO_DUPS
 setopt HIST_SAVE_NO_DUPS
 setopt HIST_REDUCE_BLANKS
 setopt HIST_VERIFY
+setopt HIST_BEEP
 
 
 function lazygit() {
