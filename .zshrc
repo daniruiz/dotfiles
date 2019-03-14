@@ -10,6 +10,15 @@ alias vi='vim'
 export VISUAL=vim
 export EDITOR="$VISUAL"
 export PATH="$PATH:$(ruby -e 'puts Gem.user_dir')/bin"
+
+export LESS_TERMCAP_mb=$'\e[1;32m'
+export LESS_TERMCAP_md=$'\e[1;32m'
+export LESS_TERMCAP_me=$'\e[0m'
+export LESS_TERMCAP_se=$'\e[0m'
+export LESS_TERMCAP_so=$'\e[01;33m'
+export LESS_TERMCAP_ue=$'\e[0m'
+export LESS_TERMCAP_us=$'\e[1;4;31m'
+
 export POWERLEVEL9K_MODE='nerdfont-complete'
 export POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 export POWERLEVEL9K_RPROMPT_ON_NEWLINE=true
