@@ -1,4 +1,5 @@
-alias ls='ls --color=auto'
+#alias ls='ls --color=auto'
+alias ls='colorls --sd --gs'
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
@@ -8,6 +9,7 @@ alias vi='vim'
 
 export VISUAL=vim
 export EDITOR="$VISUAL"
+export PATH="$PATH:$(ruby -e 'puts Gem.user_dir')/bin"
 export POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(custom_arch_icon user dir dir_writable vcs)
 export POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs)
 export POWERLEVEL9K_MODE='nerdfont-complete'
