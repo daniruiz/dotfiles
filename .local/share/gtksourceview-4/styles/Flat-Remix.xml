@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<style-scheme id="Flat-Remix-Dark" name="Flat-Remix-Dark" version="1.0">
+<style-scheme id="Flat-Remix" name="Flat-Remix" version="1.0">
 	<author>Daniel Ruiz de Alegría</author>
 	<_description>A Flat-Remix theme for Gedit</_description>
 
 	<!-- Flat-Remix colors -->
-	<color name="background" value="#191919"/>
-	<color name="current-line" value="#272a34"/>
-	<color name="selection" value="#272a34"/>
+	<color name="background" value="#ffffff"/>
+	<color name="current-line" value="#e6e6e6"/>
+	<color name="selection" value="#e6e6e6"/>
 	<color name="foreground" value="#ffffff"/>
 	<color name="comment" value="#72a2f4"/>
 	<color name="cyan" value="#4aaee6"/>
@@ -25,15 +25,16 @@
 	<color name="light-black" value="#4c4f5c"/>
 	<color name="weird-gray" value="#cccccc"/>
 
-	<style name="text" foreground="bone-white" background="background"/>
+	<style name="text" foreground="light-black" background="background"/>
 
 	<style name="selection" foreground="purple" background="selection"/>
-	<style name="cursor" foreground="white" background="white"/>
+	<style name="cursor" foreground="black" background="black"/>
 	<style name="current-line" foreground="current-line" background="current-line"/>
 	<style name="line-numbers" foreground="light-black" background="background"/>
-	<style name="bracket-match" foreground="bone-white" background="background" underline="true"/>
-	<style name="search-match" foreground="selection" background="yellow"/>
-	<style name="background-pattern" background="#1D1D1D"/>
+	<style name="bracket-match" foreground="light-black" background="background" underline="true"/>
+	<style name="search-match" foreground="selection" background="orange"/>
+	<style name="draw-spaces" foreground="weird-gray"/>
+	<style name="background-pattern" background="#f9f9f9"/>
 
 
 	<style name="def:function" foreground="green"/>
@@ -41,7 +42,7 @@
 	<style name="def:keyword" foreground="pink"/>
 	<style name="def:number" foreground="purple" />
 	<style name="def:boolean" foreground="purple"/>
-	<style name="def:string" foreground="yellow"/>
+	<style name="def:string" foreground="orange"/>
 	<style name="def:special-char" foreground="pink"/>
 	<style name="def:builtin" foreground="cyan"/>
 	<style name="def:type" foreground="green"/>
@@ -52,7 +53,7 @@
 	<style name="python:module-handler" foreground="pink"/>
 	<style name="python:function-name" foreground="green"/>
 	<style name="python:decorator" foreground="green"/>
-	<style name="python:class-name" foreground="white"/>
+	<style name="python:class-name" foreground="black"/>
 	<style name="python:special-variable" foreground="cyan"/>
 	<style name="python:builtin-constant" foreground="purple"/>
 
