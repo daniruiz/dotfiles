@@ -6,8 +6,8 @@
 
 	<!-- Flat-Remix colors -->
 	<color name="background" value="#ffffff"/>
-	<color name="current-line" value="#e6e6e6"/>
-	<color name="selection" value="#e6e6e6"/>
+	<color name="current-line" value="#f9f5f5"/>
+	<color name="selection" value="#eee"/>
 	<color name="foreground" value="#ffffff"/>
 	<color name="comment" value="#72a2f4"/>
 	<color name="cyan" value="#4aaee6"/>
