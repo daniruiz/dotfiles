@@ -76,6 +76,9 @@ setopt HIST_REDUCE_BLANKS
 setopt HIST_VERIFY
 setopt HIST_BEEP
 
+bindkey '^[[3~' delete-char
+bindkey '^[[H' beginning-of-line
+bindkey '^[[F' end-of-line
 
 function lazygit() {
 	git add .
