@@ -9,3 +9,5 @@
 	interactive = auto
 	ui = true
 	pager = true
+[credential]
+	helper = cache --timeout=3600
