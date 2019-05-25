@@ -19,10 +19,10 @@ export LESS_TERMCAP_so=$'\e[01;33m'
 export LESS_TERMCAP_ue=$'\e[0m'
 export LESS_TERMCAP_us=$'\e[1;4;31m'
 
-
 shopt -s globstar
 
 function lazygit() {
+	git status .
 	git add .
 	git commit -m "$1"
 	git push origin master
