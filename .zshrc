@@ -4,6 +4,7 @@ alias grep="grep --color=auto"
 alias fgrep="fgrep --color=auto"
 alias egrep="egrep --color=auto"
 alias pacman="pacman --color=always"
+alias scss="scss --no-cache --quiet"
 alias vi="vim"
 
 

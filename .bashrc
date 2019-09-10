@@ -1,9 +1,10 @@
 #alias ls="ls --color=auto"
-alias ls="lsd --group-dirs"
+alias ls="lsd --group-dirs first"
 alias grep="grep --color=auto"
 alias fgrep="fgrep --color=auto"
 alias egrep="egrep --color=auto"
 alias pacman="pacman --color=always"
+alias scss="scss --no-cache --quiet"
 alias vi="vim"
 alias ..="cd .."
 
@@ -11,6 +12,7 @@ alias ..="cd .."
 export VISUAL=vim
 export EDITOR="$VISUAL"
 export PATH="$PATH:$(ruby -e 'puts Gem.user_dir')/bin"
+
 export LESS_TERMCAP_mb=$'\e[1;32m'
 export LESS_TERMCAP_md=$'\e[1;32m'
 export LESS_TERMCAP_me=$'\e[0m'
