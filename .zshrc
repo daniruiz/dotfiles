@@ -1,3 +1,5 @@
+xprop -root -remove _ICC_PROFILE
+
 #alias ls="ls --color=auto"
 alias ls="lsd --group-dirs first"
 alias grep="grep --color=auto"
