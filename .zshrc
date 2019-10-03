@@ -10,7 +10,6 @@ alias vi="vim"
 
 export VISUAL=vim
 export EDITOR="$VISUAL"
-export PATH="$PATH:$(ruby -e 'puts Gem.user_dir')/bin"
 
 export LESS_TERMCAP_mb=$'\e[1;32m'
 export LESS_TERMCAP_md=$'\e[1;32m'
