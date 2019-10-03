@@ -8,6 +8,7 @@ alias egrep="egrep --color=auto"
 alias pacman="pacman --color=always"
 alias scss="scss --no-cache --quiet"
 alias vi="vim"
+alias scss="sass --no-cache --sourcemap=none"
 
 
 export VISUAL=vim
