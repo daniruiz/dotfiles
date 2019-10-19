@@ -8,6 +8,7 @@ alias scss="scss --no-cache --quiet"
 alias vi="vim"
 alias ..="cd .."
 alias scss="sass --no-cache --sourcemap=none"
+alias xclip="xclip -selection c"
 
 
 export VISUAL=vim
