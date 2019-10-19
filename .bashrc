@@ -1,5 +1,3 @@
-xprop -root -remove _ICC_PROFILE
-
 #alias ls="ls --color=auto"
 alias ls="lsd --group-dirs first"
 alias grep="grep --color=auto"
@@ -25,9 +23,15 @@ export LESS_TERMCAP_us=$'\e[1;4;31m'
 
 shopt -s globstar
 
+# -------------------------------- FUNCTIONS ---------------------------------
+
 function lazygit() {
 	git status .
 	git add .
 	git commit -m "$1"
 	git push origin master
 }
+
+# ----------------------------------- MISC -----------------------------------
+xprop -root -remove _ICC_PROFILE # Fix eog washed colors
+

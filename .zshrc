@@ -1,5 +1,3 @@
-xprop -root -remove _ICC_PROFILE
-
 #alias ls="ls --color=auto"
 alias ls="lsd --group-dirs first"
 alias grep="grep --color=auto"
@@ -21,6 +19,30 @@ export LESS_TERMCAP_se=$'\e[0m'
 export LESS_TERMCAP_so=$'\e[01;33m'
 export LESS_TERMCAP_ue=$'\e[0m'
 export LESS_TERMCAP_us=$'\e[1;4;31m'
+
+# ------------------------------- ZSH SETTINGS --------------------------------
+
+unsetopt NO_BEEP
+setopt AUTO_CD
+setopt BEEP
+setopt NOMATCH
+setopt NOTIFY
+setopt INC_APPEND_HISTORY
+setopt SHARE_HISTORY
+setopt HIST_EXPIRE_DUPS_FIRST
+setopt HIST_IGNORE_DUPS
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_FIND_NO_DUPS
+setopt HIST_SAVE_NO_DUPS
+setopt HIST_REDUCE_BLANKS
+setopt HIST_VERIFY
+setopt HIST_BEEP
+
+bindkey '^[[3~' delete-char
+bindkey '^[[H' beginning-of-line
+bindkey '^[[F' end-of-line
+
+# -------------------------------- POWERLEVEL ---------------------------------
 
 POWERLEVEL9K_MODE="nerdfont-complete"
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
@@ -63,25 +85,7 @@ SAVEHIST=5000
 
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
-unsetopt NO_BEEP
-setopt AUTO_CD
-setopt BEEP
-setopt NOMATCH
-setopt NOTIFY
-setopt INC_APPEND_HISTORY
-setopt SHARE_HISTORY
-setopt HIST_EXPIRE_DUPS_FIRST
-setopt HIST_IGNORE_DUPS
-setopt HIST_IGNORE_ALL_DUPS
-setopt HIST_FIND_NO_DUPS
-setopt HIST_SAVE_NO_DUPS
-setopt HIST_REDUCE_BLANKS
-setopt HIST_VERIFY
-setopt HIST_BEEP
-
-bindkey '^[[3~' delete-char
-bindkey '^[[H' beginning-of-line
-bindkey '^[[F' end-of-line
+# -------------------------------- FUNCTIONS ---------------------------------
 
 function lazygit() {
 	git status .
@@ -89,4 +93,7 @@ function lazygit() {
 	git commit -m "$1"
 	git push origin master
 }
+
+# ----------------------------------- MISC -----------------------------------
+xprop -root -remove _ICC_PROFILE # Fix eog washed colors
 
