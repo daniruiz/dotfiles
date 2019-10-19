@@ -61,7 +61,7 @@ DISABLE_UPDATE_PROMPT=true
 HISTSIZE=5000
 SAVEHIST=5000
 
-source /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme
+source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
 unsetopt NO_BEEP
 setopt AUTO_CD
