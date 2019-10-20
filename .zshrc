@@ -43,6 +43,8 @@ bindkey '^[[3~' delete-char
 bindkey '^[[H' beginning-of-line
 bindkey '^[[F' end-of-line
 
+export PS1="%F{red}[%F{yellow}%n%F{green}@%F{blue}%M% :%~ %F{red}]%#%F{white} "
+
 # -------------------------------- POWERLEVEL ---------------------------------
 
 POWERLEVEL9K_MODE="nerdfont-complete"
@@ -84,7 +86,7 @@ DISABLE_UPDATE_PROMPT=true
 HISTSIZE=5000
 SAVEHIST=5000
 
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+[[ $(tty) == /dev/pts/* ]] && source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme;
 
 # -------------------------------- FUNCTIONS ---------------------------------
 
