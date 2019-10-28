@@ -43,7 +43,7 @@ bindkey '^[[3~' delete-char
 bindkey '^[[H' beginning-of-line
 bindkey '^[[F' end-of-line
 
-export PS1="%F{red}[%F{yellow}%n%F{green}@%F{blue}%M% :%~ %F{red}]%#%F{white} "
+PS1="%F{red}[%F{yellow}%n%F{green}@%F{blue}%M% :%~ %F{red}]%#%F{white} "
 
 # -------------------------------- POWERLEVEL ---------------------------------
 
