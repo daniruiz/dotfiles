@@ -38,6 +38,7 @@ setopt HIST_SAVE_NO_DUPS
 setopt HIST_REDUCE_BLANKS
 setopt HIST_VERIFY
 setopt HIST_BEEP
+setopt INTERACTIVE_COMMENTS
 
 bindkey '^[[3~' delete-char
 bindkey '^[[H' beginning-of-line
