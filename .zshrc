@@ -22,7 +22,7 @@ export LESS_TERMCAP_ue=$'\e[0m'
 export LESS_TERMCAP_us=$'\e[1;4;31m'
 
 # ------------------------------- ZSH SETTINGS --------------------------------
-
+# ----- options -----
 unsetopt NO_BEEP
 unsetopt NO_MATCH
 setopt AUTO_CD
@@ -42,6 +42,13 @@ setopt HIST_BEEP
 setopt INTERACTIVE_COMMENTS
 setopt MAGIC_EQUAL_SUBST
 
+HISTFILE="$HOME/.zsh_history"
+HIST_STAMPS="mm/dd/yyyy"
+DISABLE_UPDATE_PROMPT=true
+HISTSIZE=5000
+SAVEHIST=5000
+
+# ----- keys -----
 bindkey '^[[2~' overwrite-mode
 bindkey '^[[3~' delete-char
 bindkey '^[[H' beginning-of-line
@@ -49,6 +56,7 @@ bindkey '^[[F' end-of-line
 bindkey '^[[1;5C' forward-word
 bindkey '^[[1;5D' backward-word
 
+# ----- promt -----
 PS1="%F{red}[%F{yellow}%n%F{green}@%F{blue}%M% :%~ %F{red}]%#%F{white} "
 
 # -------------------------------- POWERLEVEL ---------------------------------
@@ -86,16 +94,10 @@ POWERLEVEL9K_CUSTOM_OS_ICON_BACKGROUND="red"
 POWERLEVEL9K_CUSTOM_OS_ICON_FOREGROUND="white"
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(custom_os_icon ssh root_indicator dir dir_writable vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(command_execution_time status background_jobs time ram)
-HISTFILE="$HOME/.zsh_history"
-HIST_STAMPS="mm/dd/yyyy"
-DISABLE_UPDATE_PROMPT=true
-HISTSIZE=5000
-SAVEHIST=5000
 
 [[ $(tty) == /dev/pts/* ]] && source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme;
 
 # -------------------------------- FUNCTIONS ---------------------------------
-
 function lazygit() {
 	git status .
 	git add .
