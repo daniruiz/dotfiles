@@ -40,6 +40,7 @@ setopt HIST_REDUCE_BLANKS
 setopt HIST_VERIFY
 setopt HIST_BEEP
 setopt INTERACTIVE_COMMENTS
+setopt MAGIC_EQUAL_SUBST
 
 bindkey '^[[2~' overwrite-mode
 bindkey '^[[3~' delete-char
