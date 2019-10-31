@@ -63,6 +63,8 @@ PS1="%F{red}[%F{yellow}%n%F{green}@%F{blue}%M% :%~ %F{red}]%#%F{white} "
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+autoload compinit && compinit
+
 # -------------------------------- POWERLEVEL ---------------------------------
 
 POWERLEVEL9K_MODE="nerdfont-complete"
