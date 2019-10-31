@@ -46,6 +46,7 @@ HIST_STAMPS="mm/dd/yyyy"
 DISABLE_UPDATE_PROMPT=true
 HISTSIZE=5000
 SAVEHIST=5000
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#ccc"
 
 # ----- keys -----
 bindkey '^[[2~' overwrite-mode
@@ -57,6 +58,9 @@ bindkey '^[[1;5D' backward-word
 
 # ----- promt -----
 PS1="%F{red}[%F{yellow}%n%F{green}@%F{blue}%M% :%~ %F{red}]%#%F{white} "
+
+# ----- plugins -----
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # -------------------------------- POWERLEVEL ---------------------------------
 
