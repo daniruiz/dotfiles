@@ -24,6 +24,7 @@ export LESS_TERMCAP_us=$'\e[1;4;31m'
 # ------------------------------- ZSH SETTINGS --------------------------------
 
 unsetopt NO_BEEP
+unsetopt NO_MATCH
 setopt AUTO_CD
 setopt BEEP
 setopt NOMATCH
