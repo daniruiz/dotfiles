@@ -101,7 +101,14 @@ POWERLEVEL9K_CUSTOM_OS_ICON_FOREGROUND="white"
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(custom_os_icon ssh root_indicator dir dir_writable vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(command_execution_time status background_jobs time ram)
 
-[[ $(tty) == /dev/pts/* ]] && source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme;
+if [[ $(tty) == /dev/pts/* ]]; then
+	source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme;
+
+else
+	clear
+	echo
+	echo
+fi
 
 # -------------------------------- FUNCTIONS ---------------------------------
 function lazygit() {
