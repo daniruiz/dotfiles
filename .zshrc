@@ -57,7 +57,7 @@ bindkey '^[[1;5C' forward-word
 bindkey '^[[1;5D' backward-word
 
 # ----- promt -----
-PS1="%F{red}[%F{yellow}%n%F{green}@%F{blue}%M% :%~ %F{red}]%#%F{white} "
+PS1="%F{red} %~ > %F{white} "
 
 # ----- plugins -----
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
