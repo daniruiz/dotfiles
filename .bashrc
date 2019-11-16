@@ -23,6 +23,9 @@ export LESS_TERMCAP_us=$'\e[1;4;31m'
 
 shopt -s globstar
 
+# ----- promt -----
+PS1="\e[36m \W >\e[34m> \e[39m"
+
 # -------------------------------- FUNCTIONS ---------------------------------
 function lazygit() {
 	git status .
