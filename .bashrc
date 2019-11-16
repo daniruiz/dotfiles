@@ -1,17 +1,17 @@
-#alias ls="ls --color=auto"
-alias ls="lsd --group-dirs first"
-alias grep="grep --color=auto"
-alias fgrep="fgrep --color=auto"
-alias egrep="egrep --color=auto"
-alias pacman="pacman --color=always"
-alias scss="scss --no-cache --quiet --sourcemap=none"
-alias vi="vim"
-alias ..="cd .."
-alias xclip="xclip -selection c"
+#alias ls='ls --color=auto'
+alias ls='lsd --group-dirs first'
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+alias pacman='pacman --color=always'
+alias scss='scss --no-cache --quiet --sourcemap=none'
+alias vi='vim'
+alias ..='cd ..'
+alias xclip='xclip -selection c'
 
 
 export VISUAL=vim
-export EDITOR="$VISUAL"
+export EDITOR=$VISUAL
 
 export LESS_TERMCAP_mb=$'\e[1;32m'
 export LESS_TERMCAP_md=$'\e[1;32m'
