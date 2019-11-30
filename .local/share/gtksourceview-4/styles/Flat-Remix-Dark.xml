@@ -5,7 +5,7 @@
 	<_description>A Flat-Remix theme for Gedit</_description>
 
 	<!-- Flat-Remix colors -->
-	<color name="background" value="#191919"/>
+	<color name="background" value="#23252e"/>
 	<color name="current-line" value="#333"/>
 	<color name="selection" value="#222"/>
 	<color name="foreground" value="#ffffff"/>
