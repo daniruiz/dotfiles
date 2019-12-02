@@ -12,4 +12,4 @@
 [credential]
 	helper = cache --timeout=3600
 [alias]
-	glog = log --graph --pretty=format:'%Cblue%ad%Creset -%Cred%d%C(yellow) %h %Creset%s %C(bold blue)<%an>%Creset' --date=short
+	glog = log --branches --remotes --tags --graph --pretty=format:'%Cblue%ad%Creset -%Cred%d%C(yellow) %h %Creset%s %C(bold blue)<%an>%Creset' --date=short
