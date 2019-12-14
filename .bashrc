@@ -1,5 +1,5 @@
-#alias ls='ls --color=auto'
-alias ls='lsd --group-dirs first'
+alias ls='ls --color=auto'
+lsd &> /dev/null && alias ls='lsd --group-dirs first'
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
