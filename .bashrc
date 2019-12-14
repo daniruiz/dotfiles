@@ -23,6 +23,12 @@ export LESS_TERMCAP_ue=$'\e[0m'
 export LESS_TERMCAP_us=$'\e[1;4;31m'
 
 shopt -s globstar
+shopt -s histappend
+shopt -s checkwinsize
+
+HISTCONTROL=ignoreboth
+HISTSIZE=5000
+HISTFILESIZE=5000
 
 # ----- promt -----
 PS1="\e[36m \W >\e[34m> \e[39m"
