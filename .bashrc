@@ -31,7 +31,7 @@ HISTSIZE=5000
 HISTFILESIZE=5000
 
 # ----- promt -----
-PS1="\e[36m \W >\e[34m> \e[39m"
+PS1="\e[36m \w >\e[34m> \e[39m"
 
 # -------------------------------- FUNCTIONS ---------------------------------
 function lazygit() {
