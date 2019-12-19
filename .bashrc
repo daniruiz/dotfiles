@@ -41,6 +41,15 @@ function lazygit() {
 	git push origin HEAD
 }
 
+function find() {
+	if [ $# = 1 ];
+	then
+		command find . -iname "*$@*"
+	else
+		command find "$@"
+	fi
+}
+
 # ----------------------------------- MISC -----------------------------------
 # ----- Bash Completion -----
 if [ -f /usr/share/bash-completion/bash_completion ]; then
