@@ -62,7 +62,7 @@ bindkey '^[[1;5D' backward-word
 bindkey '^[[3;5~' kill-word
 
 # ----- promt -----
-PS1="%F{cyan} %~ >%F{blue}> %F{white}"
+PS1="%F{cyan} %~ >%F{blue}> %F{reset}"
 
 # ----- plugins -----
 PLUGINS_DIR=/usr/share/zsh/plugins/
