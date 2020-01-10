@@ -3,14 +3,15 @@ alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 alias diff='diff --color=auto'
-
 command -v lsd &> /dev/null && alias ls='lsd --group-dirs first'
+command -v colorls &> /dev/null && alias ls='colorls --sd --gs'
 command -v htop &> /dev/null && alias top='htop'
 
+alias vi='vim'
 alias pacman='pacman --color=always'
 alias scss='scss --no-cache --quiet --sourcemap=none'
-alias vi='vim'
 alias xclip='xclip -selection c'
+
 
 
 export VISUAL=vim
