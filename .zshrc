@@ -6,7 +6,7 @@ alias diff='diff --color=auto'
 command -v lsd &> /dev/null && alias ls='lsd --group-dirs first'
 command -v colorls &> /dev/null && alias ls='colorls --sd --gs'
 command -v htop &> /dev/null && alias top='htop'
-command -v gotop &> /dev/null && alias top='gotop'
+command -v gotop &> /dev/null && alias top='gotop -p'
 
 alias vi='vim'
 alias pacman='pacman --color=always'
