@@ -33,6 +33,7 @@ shopt -s checkwinsize
 HISTCONTROL=ignoreboth
 HISTSIZE=5000
 HISTFILESIZE=5000
+HISTFILE="$HOME/.cache/bash_history"
 
 # ----- promt -----
 PS1=" \[\033[01;36m\]\w >\[\033[34m\]>\[\033[00m\] "

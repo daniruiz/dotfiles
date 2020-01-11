@@ -47,7 +47,7 @@ setopt HIST_BEEP
 setopt INTERACTIVE_COMMENTS
 setopt MAGIC_EQUAL_SUBST
 
-HISTFILE="$HOME/.zsh_history"
+HISTFILE="$HOME/.cache/zsh_history"
 HIST_STAMPS=mm/dd/yyyy
 DISABLE_UPDATE_PROMPT=true
 HISTSIZE=5000
