@@ -46,6 +46,7 @@ setopt HIST_VERIFY
 setopt HIST_BEEP
 setopt INTERACTIVE_COMMENTS
 setopt MAGIC_EQUAL_SUBST
+setopt NULL_GLOB
 
 HISTFILE="$HOME/.cache/zsh_history"
 HIST_STAMPS=mm/dd/yyyy
