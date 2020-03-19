@@ -122,14 +122,65 @@ else
 fi
 
 # -------------------------------- FUNCTIONS ---------------------------------
-function lazygit() {
+lazygit() {
+	USAGE="
+lazygit [OPTION]... <msg>
+
+    GIT but lazy
+
+    Options:
+        --fixup <commit>        runs 'git commit --fixup <commit> [...]'
+        --amend                 runs 'git commit --amend --no-edit [...]'
+        -f, --force             runs 'git push --force-with-lease [...]'
+        -h, --help              show this help text
+"
+	COMMIT=''
+	MESSAGE=''
+	AMEND=0
+	FORCE=0
+	while [ $# -gt 0 ]
+	do
+		key="$1"
+
+		case $key in
+			--fixup)
+				COMMIT="$2"
+				shift # past argument
+				shift # past value
+				;;
+			--amend)
+				AMEND=1
+				shift # past argument
+				;;
+			-f|--force)
+				FORCE=1
+				shift # past argument
+				;;
+			-h|--help)
+				echo "$USAGE"
+				return 0
+				;;
+			*)
+				MESSAGE="$1"
+				shift # past argument
+				;;
+		esac
+	done
 	git status .
 	git add .
-	git commit -m "$1"
-	git push origin HEAD
+	if [ $AMEND -eq 1 ]
+	then
+		git commit --amend --no-edit
+	elif [ "$COMMIT" != '' ]
+	then
+		git commit --fixup "$COMMIT"
+	else
+		git commit -m "$MESSAGE"
+	fi
+	git push origin HEAD $([ "$FORCE" -eq 1 ] && echo '--force-with-lease')
 }
 
-function find() {
+find() {
 	if [ $# = 1 ];
 	then
 		command find . -iname "*$@*"
