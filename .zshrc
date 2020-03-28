@@ -76,7 +76,8 @@ PLUGINS_DIR=/usr/share/zsh/plugins
 source $PLUGINS_DIR/zsh-autosuggestions/zsh-autosuggestions.zsh 2> /dev/null || echo -e '\033[33m[ ! ]\033[0m ZSH auto-suggestions not installed'
 source $PLUGINS_DIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2> /dev/null || echo -e '\033[33m[ ! ]\033[0m ZSH highlighting not installed'
 
-autoload compinit && compinit
+autoload compinit && compinit -d "$HOME/.cache/zcompdump"
+
 
 # -------------------------------- POWERLEVEL ---------------------------------
 
