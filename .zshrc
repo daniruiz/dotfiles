@@ -164,14 +164,10 @@ fi
 
 
 switch_powerlevel_multiline_prompt(){
-	if [ $POWERLEVEL9K_PROMPT_ON_NEWLINE = true ]
-	then
-		POWERLEVEL9K_PROMPT_ON_NEWLINE=false
-		POWERLEVEL9K_RPROMPT_ON_NEWLINE=true
-	else
-		POWERLEVEL9K_PROMPT_ON_NEWLINE=true
-		POWERLEVEL9K_RPROMPT_ON_NEWLINE=true
-	fi
+	[ $POWERLEVEL9K_PROMPT_ON_NEWLINE = true ] \
+		&& POWERLEVEL9K_PROMPT_ON_NEWLINE=false \
+		|| POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+
 	zle && zle accept-line
 }
 zle -N switch_powerlevel_multiline_prompt
