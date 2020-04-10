@@ -7,7 +7,7 @@ alias egrep='egrep --color=auto'
 alias diff='diff --color=auto'
 alias pacman='pacman --color=auto'
 # other
-alias ..='cd ..'
+#alias ..='cd ..'
 alias glog='setterm -linewrap off && git glog && setterm -linewrap on'
 alias scss='scss --no-cache --quiet --sourcemap=none'
 alias xclip='xclip -selection c'
