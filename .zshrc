@@ -65,7 +65,6 @@ HIST_STAMPS=mm/dd/yyyy
 DISABLE_UPDATE_PROMPT=true
 HISTSIZE=5000
 SAVEHIST=5000
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#ccc'
 ZLE_RPROMPT_INDENT=0
 
 # ----- keys -----
@@ -107,6 +106,7 @@ _source_plugin() {
 _source_plugin zsh-autosuggestions
 
 # ZSH Syntax Highlighting
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#ccc'
 _source_plugin zsh-syntax-highlighting
 
 # ZSH completion system
