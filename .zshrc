@@ -116,6 +116,7 @@ autoload compinit && compinit -d "$HOME/.cache/zcompdump"
 # -------------------------------- POWERLEVEL ---------------------------------
 
 POWERLEVEL9K_MODE=nerdfont-complete
+POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 POWERLEVEL9K_RPROMPT_ON_NEWLINE=true
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
