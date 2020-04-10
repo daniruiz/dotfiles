@@ -1,24 +1,32 @@
+# --------------------------------- ALIASES -----------------------------------
+# color
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 alias diff='diff --color=auto'
+alias pacman='pacman --color=auto'
+# other
+alias ..='cd ..'
 alias glog='setterm -linewrap off && git glog && setterm -linewrap on'
+alias scss='scss --no-cache --quiet --sourcemap=none'
+alias xclip='xclip -selection c'
+# replace commands
+command -v vim &> /dev/null && alias vi='vim'
 command -v lsd &> /dev/null && alias ls='lsd --group-dirs first'
 command -v colorls &> /dev/null && alias ls='colorls --sd --gs'
 command -v htop &> /dev/null && alias top='htop'
 command -v gotop &> /dev/null && alias top='gotop -p'
 
-alias vi='vim'
-alias pacman='pacman --color=always'
-alias scss='scss --no-cache --quiet --sourcemap=none'
-alias xclip='xclip -selection c'
 
-
-
+# ----------------------------------- MISC -----------------------------------
 export VISUAL=vim
 export EDITOR=$VISUAL
 
+# enable terminal linewrap
+setterm -linewrap on
+
+# colorize man pages
 export LESS_TERMCAP_mb=$'\e[1;32m'
 export LESS_TERMCAP_md=$'\e[1;32m'
 export LESS_TERMCAP_me=$'\e[0m'
@@ -27,6 +35,7 @@ export LESS_TERMCAP_so=$'\e[01;33m'
 export LESS_TERMCAP_ue=$'\e[0m'
 export LESS_TERMCAP_us=$'\e[1;4;31m'
 export LESSHISTFILE=-
+
 
 # ------------------------------- ZSH SETTINGS --------------------------------
 # ----- options -----
@@ -82,7 +91,7 @@ _source_plugin() {
 	do
 		plugin="$basedir/$plugin_name/$plugin_name.zsh"
 		[ -f "$plugin" ] \
-			&& source "$plugin" 2> /dev/null \
+			&& source "$plugin" \
 			&& plugin_installed=true
 	done
 
@@ -162,6 +171,7 @@ switch_powerlevel_multiline_prompt(){
 }
 zle -N switch_powerlevel_multiline_prompt
 bindkey ^P switch_powerlevel_multiline_prompt
+
 
 # -------------------------------- FUNCTIONS ---------------------------------
 lazygit() {
