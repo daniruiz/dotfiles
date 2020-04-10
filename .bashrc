@@ -111,6 +111,7 @@ lazygit [OPTION]... <msg>
 	elif [ "$COMMIT" != '' ]
 	then
 		git commit --fixup "$COMMIT"
+		GIT_SEQUENCE_EDITOR=: git rebase -i --autosquash "$COMMIT^"
 	else
 		git commit -m "$MESSAGE"
 	fi
