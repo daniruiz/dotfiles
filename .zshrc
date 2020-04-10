@@ -78,6 +78,9 @@ bindkey '^[[4~' end-of-line
 bindkey '^[[1;5C' forward-word
 bindkey '^[[1;5D' backward-word
 bindkey '^[[3;5~' kill-word
+bindkey '^[[5~' beginning-of-buffer-or-history
+bindkey '^[[6~' end-of-buffer-or-history
+
 
 # ----- promt -----
 PS1="%F{cyan} %~ >%F{blue}> %F{reset}"
