@@ -73,10 +73,30 @@ bindkey '^[[3;5~' kill-word
 PS1="%F{cyan} %~ >%F{blue}> %F{reset}"
 
 # ----- plugins -----
-PLUGINS_DIR=/usr/share/zsh/plugins
-source $PLUGINS_DIR/zsh-autosuggestions/zsh-autosuggestions.zsh 2> /dev/null || echo -e '\033[33m[ ! ]\033[0m ZSH auto-suggestions not installed'
-source $PLUGINS_DIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2> /dev/null || echo -e '\033[33m[ ! ]\033[0m ZSH highlighting not installed'
+# plugin source helper
+_source_plugin() {
+	plugin_installed=false
+	plugin_name="$1"
 
+	for basedir in /usr/share/zsh/plugins /usr/share
+	do
+		plugin="$basedir/$plugin_name/$plugin_name.zsh"
+		[ -f "$plugin" ] \
+			&& source "$plugin" 2> /dev/null \
+			&& plugin_installed=true
+	done
+
+	[ $plugin_installed = false ] \
+		&& echo -e "\033[33m[ ! ]\033[0m ZSH ${plugin_name#zsh-} not installed"
+}
+
+# ZSH Autosuggestions
+_source_plugin zsh-autosuggestions
+
+# ZSH Syntax Highlighting
+_source_plugin zsh-syntax-highlighting
+
+# ZSH completion system
 autoload compinit && compinit -d "$HOME/.cache/zcompdump"
 
 
@@ -118,8 +138,10 @@ POWERLEVEL9K_CUSTOM_OS_ICON_FOREGROUND=white
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(custom_os_icon root_indicator ssh dir dir_writable vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(command_execution_time status background_jobs time ram)
 
-if [[ $(tty) == /dev/pts/* ]]; then
-	source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme 2> /dev/null || echo -e '\033[33m[ ! ]\033[0m ZSH powerlevel10k not installed'
+if [[ $(tty) == /dev/pts/* ]]
+then
+	source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme 2> /dev/null || \
+		echo -e '\033[33m[ ! ]\033[0m ZSH powerlevel10k not installed'
 else
 	clear
 	echo
@@ -200,6 +222,7 @@ lazygit [OPTION]... <msg>
 	fi
 	git push origin HEAD $([ "$FORCE" -eq 1 ] && echo '--force-with-lease')
 }
+
 
 find() {
 	if [ $# = 1 ];
