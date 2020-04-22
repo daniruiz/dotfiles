@@ -16,6 +16,7 @@ command -v vim &> /dev/null && alias vi='vim'
 command -v lsd &> /dev/null && alias ls='lsd --group-dirs first'
 command -v colorls &> /dev/null && alias ls='colorls --sd --gs'
 command -v bat &> /dev/null && \
+    alias bat='bat --theme=ansi-dark' && \
     alias cat='bat --pager=never' && \
     alias less='bat'
 command -v htop &> /dev/null && alias top='htop'
