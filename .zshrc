@@ -15,6 +15,9 @@ alias xclip='xclip -selection c'
 command -v vim &> /dev/null && alias vi='vim'
 command -v lsd &> /dev/null && alias ls='lsd --group-dirs first'
 command -v colorls &> /dev/null && alias ls='colorls --sd --gs'
+command -v bat &> /dev/null && \
+    alias cat='bat --pager=never' && \
+    alias less='bat'
 command -v htop &> /dev/null && alias top='htop'
 command -v gotop &> /dev/null && alias top='gotop -p'
 command -v ytop &> /dev/null && alias top='ytop -p'
