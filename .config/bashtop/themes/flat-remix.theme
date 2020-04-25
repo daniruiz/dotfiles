@@ -49,8 +49,8 @@ theme[proc_box]="#4aaee6"
 theme[div_line]="#50"
 
 # Temperature graph colors
-theme[temp_start]="#265ab1"
-theme[temp_mid]="#fd7d00"
+theme[temp_start]="#367bf0"
+theme[temp_mid]="#b8174c"
 theme[temp_end]="#d41919"
 
 # CPU graph colors
