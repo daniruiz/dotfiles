@@ -55,8 +55,8 @@ theme[temp_end]="#d41919"
 
 # CPU graph colors
 theme[cpu_start]="#367bf0"
-theme[cpu_mid]="#19a187"
-theme[cpu_end]="#b8174c"
+theme[cpu_mid]="#4aaee6"
+theme[cpu_end]="#54bd8e"
 
 # Mem/Disk free meter
 theme[free_start]="#811035"
