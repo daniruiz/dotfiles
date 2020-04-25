@@ -1,3 +1,9 @@
+
+# Configure color-scheme
+COLOR_SCHEME=dark # dark/light
+
+
+
 # --------------------------------- ALIASES -----------------------------------
 # color
 alias ls='ls --color=auto'
@@ -18,14 +24,14 @@ command -v lsd &> /dev/null && alias ls='lsd --group-dirs first'
 command -v colorls &> /dev/null && alias ls='colorls --sd --gs'
   # cat & less
 command -v bat &> /dev/null && \
-    alias bat='bat --theme=ansi-dark' && \
+    alias bat='bat --theme=ansi-$([ "$COLOR_SCHEME" = "light" ] && echo "light" || echo "dark")' && \
     alias cat='bat --pager=never' && \
     alias less='bat'
   # top
 command -v htop &> /dev/null && alias top='htop'
-command -v gotop &> /dev/null && alias top='gotop -p'
-command -v ytop &> /dev/null && alias top='ytop -p'
-command -v bashtop &> /dev/null && alias top='bashtop'
+command -v gotop &> /dev/null && alias top='gotop -p $([ "$COLOR_SCHEME" = "light" ] && echo "-c default-dark")'
+command -v ytop &> /dev/null && alias top='ytop -p $([ "$COLOR_SCHEME" = "light" ] && echo "-c default-dark")'
+command -v bashtop &> /dev/null && alias top='bashtop' # themes for light/dark color-schemes inside ~/.config/bashtop; Press ESC to open the menu and change the theme
 
 
 # ----------------------------------- MISC -----------------------------------
