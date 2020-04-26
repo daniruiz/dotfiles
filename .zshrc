@@ -19,9 +19,11 @@ alias scss='scss --no-cache --quiet --sourcemap=none'
 alias xclip='xclip -selection c'
 # replace commands
 command -v vim > /dev/null && alias vi='vim'
-  # ls
-command -v lsd > /dev/null && alias ls='lsd --group-dirs first'
-command -v colorls > /dev/null && alias ls='colorls --sd --gs'
+  # ls & tree
+command -v lsd > /dev/null && alias ls='lsd --group-dirs first' && \
+    alias tree='lsd --tree'
+command -v colorls > /dev/null && alias ls='colorls --sd --gs' && \
+    alias tree='colorls --tree'
   # cat & less
 command -v bat > /dev/null && \
     alias bat='bat --theme=ansi-$([ "$COLOR_SCHEME" = "light" ] && echo "light" || echo "dark")' && \
