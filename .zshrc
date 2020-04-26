@@ -18,20 +18,20 @@ alias glog='setterm -linewrap off && git glog && setterm -linewrap on'
 alias scss='scss --no-cache --quiet --sourcemap=none'
 alias xclip='xclip -selection c'
 # replace commands
-command -v vim &> /dev/null && alias vi='vim'
+command -v vim > /dev/null && alias vi='vim'
   # ls
-command -v lsd &> /dev/null && alias ls='lsd --group-dirs first'
-command -v colorls &> /dev/null && alias ls='colorls --sd --gs'
+command -v lsd > /dev/null && alias ls='lsd --group-dirs first'
+command -v colorls > /dev/null && alias ls='colorls --sd --gs'
   # cat & less
-command -v bat &> /dev/null && \
+command -v bat > /dev/null && \
     alias bat='bat --theme=ansi-$([ "$COLOR_SCHEME" = "light" ] && echo "light" || echo "dark")' && \
     alias cat='bat --pager=never' && \
     alias less='bat'
   # top
-command -v htop &> /dev/null && alias top='htop'
-command -v gotop &> /dev/null && alias top='gotop -p $([ "$COLOR_SCHEME" = "light" ] && echo "-c default-dark")'
-command -v ytop &> /dev/null && alias top='ytop -p $([ "$COLOR_SCHEME" = "light" ] && echo "-c default-dark")'
-command -v bashtop &> /dev/null && alias top='bashtop' # themes for light/dark color-schemes inside ~/.config/bashtop; Press ESC to open the menu and change the theme
+command -v htop > /dev/null && alias top='htop'
+command -v gotop > /dev/null && alias top='gotop -p $([ "$COLOR_SCHEME" = "light" ] && echo "-c default-dark")'
+command -v ytop > /dev/null && alias top='ytop -p $([ "$COLOR_SCHEME" = "light" ] && echo "-c default-dark")'
+command -v bashtop > /dev/null && alias top='bashtop' # themes for light/dark color-schemes inside ~/.config/bashtop; Press ESC to open the menu and change the theme
 
 
 # ----------------------------------- MISC -----------------------------------
