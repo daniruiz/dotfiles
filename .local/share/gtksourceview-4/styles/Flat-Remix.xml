@@ -26,7 +26,7 @@
 
 	<style name="text" foreground="light-black" background="background"/>
 
-	<style name="selection" foreground="blue" background="selection"/>
+	<style name="selection" foreground="white" background="blue"/>
 	<style name="cursor" foreground="black" background="black"/>
 	<style name="current-line" foreground="current-line" background="current-line"/>
 	<style name="line-numbers" foreground="light-black" background="background"/>
