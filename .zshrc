@@ -65,6 +65,12 @@ then
 	zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 fi
 
+# If this is an xterm set the title to user@host:dir
+case "$TERM" in
+xterm*|rxvt*)
+	precmd () { print -Pn "\e]0;%n@%m: %~\a" }
+	;;
+esac
 
 # ------------------------------- ZSH SETTINGS --------------------------------
 # ----- options -----
