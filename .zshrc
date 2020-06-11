@@ -74,34 +74,32 @@ esac
 
 # ------------------------------- ZSH SETTINGS --------------------------------
 # ----- options -----
-unsetopt NO_BEEP
-unsetopt NO_MATCH
 setopt AUTO_CD
 setopt BEEP
-setopt NOMATCH
-setopt NOTIFY
-setopt INC_APPEND_HISTORY
-setopt SHARE_HISTORY
-setopt HIST_EXPIRE_DUPS_FIRST
-setopt HIST_IGNORE_DUPS
-setopt HIST_IGNORE_ALL_DUPS
-setopt HIST_FIND_NO_DUPS
-setopt HIST_SAVE_NO_DUPS
-setopt HIST_REDUCE_BLANKS
-setopt HIST_VERIFY
 setopt HIST_BEEP
+setopt HIST_EXPIRE_DUPS_FIRST
+setopt HIST_FIND_NO_DUPS
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_IGNORE_DUPS
+setopt HIST_REDUCE_BLANKS
+setopt HIST_SAVE_NO_DUPS
+setopt HIST_VERIFY
+setopt INC_APPEND_HISTORY
 setopt INTERACTIVE_COMMENTS
 setopt MAGIC_EQUAL_SUBST
-setopt NULL_GLOB
+setopt NO_NO_MATCH
+setopt NOTIFY
+setopt PROMPT_SUBST
+setopt SHARE_HISTORY
 
 HISTFILE="$HOME/.cache/zsh_history"
 HIST_STAMPS=mm/dd/yyyy
-DISABLE_UPDATE_PROMPT=true
 HISTSIZE=5000
 SAVEHIST=5000
 ZLE_RPROMPT_INDENT=0
 
 # ----- keys -----
+bindkey '^U' backward-kill-line
 bindkey '^[[2~' overwrite-mode
 bindkey '^[[3~' delete-char
 bindkey '^[[H' beginning-of-line
@@ -113,6 +111,7 @@ bindkey '^[[1;5D' backward-word
 bindkey '^[[3;5~' kill-word
 bindkey '^[[5~' beginning-of-buffer-or-history
 bindkey '^[[6~' end-of-buffer-or-history
+bindkey ' ' magic-space
 
 
 # ----- promt -----
