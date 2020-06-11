@@ -143,7 +143,9 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#ccc'
 _source_plugin zsh-syntax-highlighting
 
 # ZSH completion system
-autoload compinit && compinit -d "$HOME/.cache/zcompdump"
+autoload -Uz compinit
+compinit -d "$HOME/.cache/zcompdump"
+zstyle ':completion:*:*:*:*:*' menu select
 
 
 # -------------------------------- POWERLEVEL ---------------------------------
