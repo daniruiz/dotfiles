@@ -75,6 +75,7 @@ esac
 # ----- options -----
 setopt AUTO_CD
 setopt BEEP
+#setopt CORRECT
 setopt HIST_BEEP
 setopt HIST_EXPIRE_DUPS_FIRST
 setopt HIST_FIND_NO_DUPS
@@ -88,6 +89,7 @@ setopt INTERACTIVE_COMMENTS
 setopt MAGIC_EQUAL_SUBST
 setopt NO_NO_MATCH
 setopt NOTIFY
+setopt NUMERIC_GLOB_SORT
 setopt PROMPT_SUBST
 setopt SHARE_HISTORY
 
@@ -96,6 +98,7 @@ HIST_STAMPS=mm/dd/yyyy
 HISTSIZE=5000
 SAVEHIST=5000
 ZLE_RPROMPT_INDENT=0
+WORDCHARS=${WORDCHARS//\/}
 
 # ----- keys -----
 bindkey '^U' backward-kill-line
@@ -145,6 +148,7 @@ _source_plugin zsh-syntax-highlighting
 autoload -Uz compinit
 compinit -d "$HOME/.cache/zcompdump"
 zstyle ':completion:*:*:*:*:*' menu select
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 
 
 # -------------------------------- POWERLEVEL ---------------------------------
