@@ -7,11 +7,6 @@ COLOR_SCHEME=dark # dark/light
 # --------------------------------- ALIASES -----------------------------------
 # color
 alias ls='ls --color=auto'
-alias ll='ls -l'
-alias la='ls -A'
-alias l='ls -F'
-alias dir='dir --color=auto'
-alias vdir='vdir --color=auto'
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
@@ -25,6 +20,9 @@ alias xclip='xclip -selection c'
 # replace commands
 command -v vim > /dev/null && alias vi='vim'
   # ls & tree
+alias ll='ls -l'
+alias la='ls -A'
+alias l='ls -F'
 command -v lsd > /dev/null && alias ls='lsd --group-dirs first' && \
     alias tree='lsd --tree'
 command -v colorls > /dev/null && alias ls='colorls --sd --gs' && \
