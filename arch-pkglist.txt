@@ -1,4 +1,9 @@
 # Package list for my custom arch + gnome installation
+# Useful commands
+# * Get manually installed packages:
+#   $ comm <(pacman -Qettq) <(pacman -Qgq base-devel) -23
+# * Show manually installed packages not in this list
+#   $ comm <(cat arch-pkglist.txt | grep -v '^#' | sort) <(comm <(pacman -Qettq) <(pacman -Qgq base-devel) -23) -13
 
 # BASE
 base
