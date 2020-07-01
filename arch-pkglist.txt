@@ -15,8 +15,11 @@ baobab
 chrome-gnome-shell
 eog
 file-roller
+ffmpegthumbnailer
 gdm
+geary
 gedit
+gedit-plugins
 gnome-calculator
 gnome-calendar
 gnome-clocks
@@ -29,8 +32,13 @@ gnome-shell-extensions
 gnome-system-monitor
 gnome-terminal
 gnome-tweaks
+gnome-weather
+gst-libav
+gvfs-google
+libgit2-glib
 nautilus
 networkmanager
+sushi
 totem
 xdg-user-dirs-gtk
 
@@ -41,3 +49,4 @@ zsh-theme-powerlevel10k
 
 # OTHER
 firefox
+noto-fonts-emoji
