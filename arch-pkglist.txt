@@ -1,0 +1,43 @@
+# Package list for my custom arch + gnome installation
+
+# BASE
+base
+base-devel
+efibootmgr
+grub
+linux
+linux-firmware
+man-db
+vim
+
+# GNOME
+baobab
+chrome-gnome-shell
+eog
+file-roller
+gdm
+gedit
+gnome-calculator
+gnome-calendar
+gnome-clocks
+gnome-documents
+gnome-font-viewer
+gnome-keyring
+gnome-music
+gnome-screenshot
+gnome-shell-extensions
+gnome-system-monitor
+gnome-terminal
+gnome-tweaks
+nautilus
+networkmanager
+totem
+xdg-user-dirs-gtk
+
+# ZSH
+zsh-autosuggestions
+zsh-syntax-highlighting
+zsh-theme-powerlevel10k
+
+# OTHER
+firefox
