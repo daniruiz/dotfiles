@@ -48,6 +48,7 @@ totem
 xdg-user-dirs-gtk
 
 # ZSH
+lsd
 zsh-autosuggestions
 zsh-syntax-highlighting
 zsh-theme-powerlevel10k
