@@ -47,7 +47,8 @@ sushi
 totem
 xdg-user-dirs-gtk
 
-# ZSH
+# ZSH & TERMINAL
+bashtop
 lsd
 zsh-autosuggestions
 zsh-syntax-highlighting
