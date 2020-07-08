@@ -12,8 +12,6 @@ efibootmgr
 grub
 linux
 linux-firmware
-man-db
-vim
 
 # GNOME
 baobab
@@ -51,6 +49,8 @@ xdg-user-dirs-gtk
 bashtop
 bat
 lsd
+man-db
+vim
 zsh-autosuggestions
 zsh-syntax-highlighting
 zsh-theme-powerlevel10k
