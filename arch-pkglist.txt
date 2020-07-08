@@ -49,6 +49,7 @@ xdg-user-dirs-gtk
 
 # ZSH & TERMINAL
 bashtop
+bat
 lsd
 zsh-autosuggestions
 zsh-syntax-highlighting
