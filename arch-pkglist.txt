@@ -51,6 +51,7 @@ bat
 lsd
 man-db
 vim
+xclip
 zsh-autosuggestions
 zsh-syntax-highlighting
 zsh-theme-powerlevel10k
