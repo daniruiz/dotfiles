@@ -59,3 +59,13 @@ zsh-theme-powerlevel10k
 # OTHER
 firefox
 noto-fonts-emoji
+
+# ========== #
+#    AUR     #
+# ========== #
+flat-remix
+flat-remix-gnome
+flat-remix-gtk
+nerd-fonts-hack
+pulseaudio-bluetooth-a2dp-gdm-fix
+yay
