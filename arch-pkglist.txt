@@ -66,6 +66,6 @@ noto-fonts-emoji
 flat-remix
 flat-remix-gnome
 flat-remix-gtk
-nerd-fonts-hack
+nerd-fonts-fira-code
 pulseaudio-bluetooth-a2dp-gdm-fix
 yay
