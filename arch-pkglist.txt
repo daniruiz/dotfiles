@@ -29,7 +29,6 @@ gnome-clocks
 gnome-documents
 gnome-font-viewer
 gnome-keyring
-gnome-music
 gnome-screenshot
 gnome-shell-extensions
 gnome-system-monitor
@@ -44,6 +43,8 @@ networkmanager
 sushi
 totem
 xdg-user-dirs-gtk
+lollypop
+youtube-dl
 
 # ZSH & TERMINAL
 bashtop
