@@ -16,7 +16,11 @@ linux
 linux-firmware
 
 # GNOME
+
+# ZSH & TERMINAL
 baobab
+bashtop
+bat
 chrome-gnome-shell
 eog
 ffmpegthumbnailer
@@ -37,6 +41,7 @@ gnome-shell-extensions
 gnome-system-monitor
 gnome-terminal
 gnome-tweaks
+gnome-user-share
 gnome-weather
 grilo-plugins
 gst-libav
@@ -49,20 +54,17 @@ gvfs-nfs
 gvfs-smb
 libgit2-glib
 lollypop
-nautilus
-networkmanager
-sushi
-totem
-xdg-user-dirs-gtk
-youtube-dl
-
-# ZSH & TERMINAL
-bashtop
-bat
 lsd
 man-db
+nautilus
+networkmanager
+rygel
+sushi
+totem
 vim
 xclip
+xdg-user-dirs-gtk
+youtube-dl
 zsh-autosuggestions
 zsh-syntax-highlighting
 zsh-theme-powerlevel10k
