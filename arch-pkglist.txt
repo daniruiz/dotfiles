@@ -4,6 +4,8 @@
 #   $ comm <(pacman -Qettq) <(pacman -Qgq base-devel) -23
 # * Show manually installed packages not in this list
 #   $ comm <(cat arch-pkglist.txt | grep -v '^#' | sort) <(comm <(pacman -Qettq) <(pacman -Qgq base-devel) -23) -13
+# * Install all packages (you need yay installed)
+#   $ yay -S $(grep -v '^#' arch-pkglist.txt | xargs)
 
 # BASE
 base
@@ -17,8 +19,8 @@ linux-firmware
 baobab
 chrome-gnome-shell
 eog
-file-roller
 ffmpegthumbnailer
+file-roller
 gdm
 geary
 gedit
@@ -30,20 +32,22 @@ gnome-documents
 gnome-font-viewer
 gnome-keyring
 gnome-screenshot
+gnome-shell
 gnome-shell-extensions
 gnome-system-monitor
 gnome-terminal
 gnome-tweaks
 gnome-weather
+grilo-plugins
 gst-libav
 gvfs-google
 libgit2-glib
+lollypop
 nautilus
 networkmanager
 sushi
 totem
 xdg-user-dirs-gtk
-lollypop
 youtube-dl
 
 # ZSH & TERMINAL
