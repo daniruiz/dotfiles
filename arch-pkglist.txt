@@ -39,8 +39,15 @@ gnome-terminal
 gnome-tweaks
 gnome-weather
 grilo-plugins
+gst
 gst-libav
+gvfs-afc
+gvfs-goa
 gvfs-google
+gvfs-gphoto2
+gvfs-mtp
+gvfs-nfs
+gvfs-smb
 libgit2-glib
 lollypop
 nautilus
