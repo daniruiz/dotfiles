@@ -1,7 +1,0 @@
-
-[ppa]
-fqdn			= ppa.launchpad.net
-method			= ftp
-incoming		= ~daniruiz/flat-remix/ubuntu
-login			= anonymous
-
