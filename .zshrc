@@ -3,9 +3,12 @@
 COLOR_SCHEME=dark # dark/light
 
 
-
 # --------------------------------- ALIASES -----------------------------------
-# color
+#alias ..='cd ..'
+alias xclip='xclip -selection c'
+command -v vim > /dev/null && alias vi='vim'
+
+### Colorize commands
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
@@ -13,30 +16,28 @@ alias egrep='egrep --color=auto'
 alias diff='diff --color=auto'
 alias ip='ip --color=auto'
 alias pacman='pacman --color=auto'
-# other
-#alias ..='cd ..'
-alias scss='scss --no-cache --quiet --sourcemap=none'
-alias xclip='xclip -selection c'
-# replace commands
-command -v vim > /dev/null && alias vi='vim'
-  # ls & tree
+
+### LS & TREE
 alias ll='ls -l'
 alias la='ls -A'
 alias l='ls -F'
 command -v lsd > /dev/null && alias ls='lsd --group-dirs first' && \
-    alias tree='lsd --tree'
+	alias tree='lsd --tree'
 command -v colorls > /dev/null && alias ls='colorls --sd --gs' && \
-    alias tree='colorls --tree'
-  # cat & less
+	alias tree='colorls --tree'
+
+### CAT & LESS
 command -v bat > /dev/null && \
-    alias bat='bat --theme=ansi-$([ "$COLOR_SCHEME" = "light" ] && echo "light" || echo "dark")' && \
-    alias cat='bat --pager=never' && \
-    alias less='bat'
-  # top
+	alias bat='bat --theme=ansi-$([ "$COLOR_SCHEME" = "light" ] && echo "light" || echo "dark")' && \
+	alias cat='bat --pager=never' && \
+	alias less='bat'
+
+### TOP
 command -v htop > /dev/null && alias top='htop'
 command -v gotop > /dev/null && alias top='gotop -p $([ "$COLOR_SCHEME" = "light" ] && echo "-c default-dark")'
 command -v ytop > /dev/null && alias top='ytop -p $([ "$COLOR_SCHEME" = "light" ] && echo "-c default-dark")'
-command -v bashtop > /dev/null && alias top='bashtop' # themes for light/dark color-schemes inside ~/.config/bashtop; Press ESC to open the menu and change the theme
+# themes for light/dark color-schemes inside ~/.config/bashtop; Press ESC to open the menu and change the theme
+command -v bashtop > /dev/null && alias top='bashtop'
 
 
 # ----------------------------------- MISC -----------------------------------
