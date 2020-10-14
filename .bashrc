@@ -56,18 +56,17 @@ export LESS_TERMCAP_ue=$'\e[0m'
 export LESS_TERMCAP_us=$'\e[1;4;31m'
 export LESSHISTFILE=-
 
-# colorize ls files
+# colorize ls
 [ -x /usr/bin/dircolors ] && eval "$(dircolors -b)"
 
-# If this is an xterm set the title to user@host:dir
+# if this is an xterm set the title to user@host:dir
 case "$TERM" in
 xterm*|rxvt*)
-    PS1="\[\e]0;\u@\h: \w\a\]$PS1"
-    ;;
+	PS1="\[\e]0;\u@\h: \w\a\]$PS1"
+	;;
 esac
 
 # ------------------------------- BASH SETTINGS --------------------------------
-# ----- options -----
 shopt -s globstar
 shopt -s histappend
 shopt -s checkwinsize
@@ -77,7 +76,7 @@ HISTSIZE=5000
 HISTFILESIZE=5000
 HISTFILE="$HOME/.cache/bash_history"
 
-# ----- Bash Completion -----
+# Bash Completion
 if [ -f /usr/share/bash-completion/bash_completion ]
 then
 	source /usr/share/bash-completion/bash_completion
@@ -86,35 +85,8 @@ then
 	source /etc/bash_completion
 fi
 
-
-# -------------------------------- PROMPT ---------------------------------
-
-# *                       ~ >>
-# *
-#PS1=" \[\033[01;36m\]\w >\[\033[34m\]>\[\033[00m\] "
-
-
-# *                       ┌─────(daniruiz)─────(~) 
-# *                       └> $ 
-# *
-PS1="\n \[\033[0;34m\]┌─────(\[\033[1;35m\]\u\[\033[0;34m\])─────(\[\033[1;32m\]\w\[\033[0;34m\]) \n └> \[\033[1;36m\]\$ \[\033[0m\]"
-
-
-# ----- Using patched fonts -----
-OS_ICON=
-
-# *                       ╭─────  daniruiz ───── ~  
-# *                       ╰ $ 
-# *
-#PS1="\n \[\033[0;34m\]╭─────\[\033[0;31m\]\[\033[0;37m\]\[\033[41m\] $OS_ICON \u \[\033[0m\]\[\033[0;31m\]\[\033[0;34m\]─────\[\033[0;32m\]\[\033[0;30m\]\[\033[42m\] \w \[\033[0m\]\[\033[0;32m\] \n \[\033[0;34m\]╰ \[\033[1;36m\]\$ \[\033[0m\]"
-
-
-# *                         POWERLEVEL_K like
-# *
-# *                       ╭─  daniruiz  ~  
-# *                       ╰ $ 
-# *
-#PS1="\n \[\033[0;34m\]╭─\[\033[0;31m\]\[\033[0;37m\]\[\033[41m\] $OS_ICON \u \[\033[0m\]\[\033[0;31m\]\[\033[44m\]\[\033[0;34m\]\[\033[44m\]\[\033[0;30m\]\[\033[44m\] \w \[\033[0m\]\[\033[0;34m\] \n \[\033[0;34m\]╰ \[\033[1;36m\]\$ \[\033[0m\]"
+# Prompt
+PS1='\[\033[;32m\]┌──(\[\033[1;34m\]\u@\h\[\033[;32m\])-[\[\033[0;1m\]\w\[\033[;32m\]]\n\[\033[;32m\]└─\[\033[1;34m\]\$\[\033[0m\] '
 
 
 # -------------------------------- FUNCTIONS ---------------------------------
