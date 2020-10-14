@@ -102,10 +102,6 @@ lazygit [OPTION]... <msg>
         -f, --force             runs 'git push --force-with-lease [...]'
         -h, --help              show this help text
 "
-	COMMIT=''
-	MESSAGE=''
-	AMEND=0
-	FORCE=0
 	while [ $# -gt 0 ]
 	do
 		key="$1"
@@ -117,16 +113,16 @@ lazygit [OPTION]... <msg>
 				shift # past value
 				;;
 			--amend)
-				AMEND=1
+				AMEND=true
 				shift # past argument
 				;;
 			-f|--force)
-				FORCE=1
+				FORCE=true
 				shift # past argument
 				;;
 			-h|--help)
 				echo "$USAGE"
-				return 0
+				EXIT=true
 				;;
 			*)
 				MESSAGE="$1"
@@ -134,45 +130,50 @@ lazygit [OPTION]... <msg>
 				;;
 		esac
 	done
-	git status .
-	git add .
-	if [ $AMEND -eq 1 ]
+	unset key
+	if [ -z "$EXIT" ]
 	then
-		git commit --amend --no-edit
-	elif [ "$COMMIT" != '' ]
-	then
-		git commit --fixup "$COMMIT"
-		GIT_SEQUENCE_EDITOR=: git rebase -i --autosquash "$COMMIT^"
-	else
-		git commit -m "$MESSAGE"
+		git status .
+		git add .
+		if [ -n "$AMEND" ]
+		then
+			git commit --amend --no-edit
+		elif [ -n "$COMMIT" ]
+		then
+			git commit --fixup "$COMMIT"
+			GIT_SEQUENCE_EDITOR=: git rebase -i --autosquash "$COMMIT"^
+		else
+			git commit -m "$MESSAGE"
+		fi
+		git push origin HEAD $([ -n "$FORCE" ] && echo '--force-with-lease')
 	fi
-	git push origin HEAD $([ "$FORCE" -eq 1 ] && echo '--force-with-lease')
+	unset USAGE COMMIT MESSAGE AMEND FORCE
 }
 
 glog() {
 	setterm -linewrap off 2> /dev/null
 
 	git --no-pager log --all --color=always --graph --abbrev-commit --decorate \
-	--format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' | \
-		sed -E \
-		-e 's/\|(\x1b\[[0-9;]*m)+\\(\x1b\[[0-9;]*m)+ /├\1─╮\2/' \
-		-e 's/(\x1b\[[0-9;]+m)\|\x1b\[m\1\/\x1b\[m /\1├─╯\x1b\[m/' \
-		-e 's/\|(\x1b\[[0-9;]*m)+\\(\x1b\[[0-9;]*m)+/├\1╮\2/' \
-		-e 's/(\x1b\[[0-9;]+m)\|\x1b\[m\1\/\x1b\[m/\1├╯\x1b\[m/' \
-		-e 's/╮(\x1b\[[0-9;]*m)+\\/╮\1╰╮/' \
-		-e 's/╯(\x1b\[[0-9;]*m)+\//╯\1╭╯/' \
-		-e 's/(\||\\)\x1b\[m   (\x1b\[[0-9;]*m)/╰╮\2/' \
-		-e 's/(\x1b\[[0-9;]*m)\\/\1╮/g' \
-		-e 's/(\x1b\[[0-9;]*m)\//\1╯/g' \
-		-e 's/^\*|(\x1b\[m )\*/\1⎬/g' \
-		-e 's/(\x1b\[[0-9;]*m)\|/\1│/g' \
+	--format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' \
+		| sed -E \
+			-e 's/\|(\x1b\[[0-9;]*m)+\\(\x1b\[[0-9;]*m)+ /├\1─╮\2/' \
+			-e 's/(\x1b\[[0-9;]+m)\|\x1b\[m\1\/\x1b\[m /\1├─╯\x1b\[m/' \
+			-e 's/\|(\x1b\[[0-9;]*m)+\\(\x1b\[[0-9;]*m)+/├\1╮\2/' \
+			-e 's/(\x1b\[[0-9;]+m)\|\x1b\[m\1\/\x1b\[m/\1├╯\x1b\[m/' \
+			-e 's/╮(\x1b\[[0-9;]*m)+\\/╮\1╰╮/' \
+			-e 's/╯(\x1b\[[0-9;]*m)+\//╯\1╭╯/' \
+			-e 's/(\||\\)\x1b\[m   (\x1b\[[0-9;]*m)/╰╮\2/' \
+			-e 's/(\x1b\[[0-9;]*m)\\/\1╮/g' \
+			-e 's/(\x1b\[[0-9;]*m)\//\1╯/g' \
+			-e 's/^\*|(\x1b\[m )\*/\1⎬/g' \
+			-e 's/(\x1b\[[0-9;]*m)\|/\1│/g' \
 		| command less -r +'/[^/]HEAD'
 
 	setterm -linewrap on 2> /dev/null
 }
 
 find() {
-	if [ $# = 1 ];
+	if [ $# = 1 ]
 	then
 		command find . -iname "*$@*"
 	else
