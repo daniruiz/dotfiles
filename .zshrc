@@ -44,7 +44,7 @@ export VISUAL=vim
 export EDITOR=$VISUAL
 
 # enable terminal linewrap
-setterm -linewrap on
+setterm -linewrap on 2> /dev/null
 
 # colorize man pages
 export LESS_TERMCAP_mb=$'\e[1;32m'
@@ -333,7 +333,7 @@ lazygit [OPTION]... <msg>
 }
 
 glog() {
-	setterm -linewrap off
+	setterm -linewrap off 2> /dev/null
 
 	git --no-pager log --all --color=always --graph --abbrev-commit --decorate \
 	--format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' | \
@@ -351,7 +351,7 @@ glog() {
 		-e 's/(\x1b\[[0-9;]*m)\|/\1│/g' \
 		| command less -r +'/[^/]HEAD'
 
-	setterm -linewrap on
+	setterm -linewrap on 2> /dev/null
 }
 
 find() {
