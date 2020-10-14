@@ -39,34 +39,7 @@ command -v ytop > /dev/null && alias top='ytop -p $([ "$COLOR_SCHEME" = "light" 
 # themes for light/dark color-schemes inside ~/.config/bashtop; Press ESC to open the menu and change the theme
 command -v bashtop > /dev/null && alias top='bashtop'
 
-# ----------------------------------- MISC -----------------------------------
-export VISUAL=vim
-export EDITOR=$VISUAL
-
-# enable terminal linewrap
-setterm -linewrap on 2> /dev/null
-
-# colorize man pages
-export LESS_TERMCAP_mb=$'\e[1;32m'
-export LESS_TERMCAP_md=$'\e[1;32m'
-export LESS_TERMCAP_me=$'\e[0m'
-export LESS_TERMCAP_se=$'\e[0m'
-export LESS_TERMCAP_so=$'\e[01;33m'
-export LESS_TERMCAP_ue=$'\e[0m'
-export LESS_TERMCAP_us=$'\e[1;4;31m'
-export LESSHISTFILE=-
-
-# colorize ls
-[ -x /usr/bin/dircolors ] && eval "$(dircolors -b)"
-
-# if this is an xterm set the title to user@host:dir
-case "$TERM" in
-xterm*|rxvt*)
-	precmd() { print -Pnr -- $'\e]0;%n@%m: %~\a' }
-	;;
-esac
-
-# ------------------------------- ZSH SETTINGS --------------------------------
+# --------------------------------- SETTINGS ----------------------------------
 setopt AUTO_CD
 setopt BEEP
 #setopt CORRECT
@@ -121,6 +94,33 @@ bindkey ' ' magic-space
 # Prompt
 PROMPT=$'%F{%(#.blue.green)}┌──(%B%F{%(#.red.blue)}%n@%m%b%F{%(#.blue.green)})-[%B%F{reset}%(6~.%-1~/…/%4~.%5~)%b%F{%(#.blue.green)}]\n└─%B%(#.%F{red}#.%F{blue}$)%b%F{reset} '
 RPROMPT=$'%(?.. %? %F{red}%Bx%b%F{reset})%(1j. %j %F{yellow}%Bbg %b%F{reset}.)'
+
+# ----------------------------------- MISC -----------------------------------
+export VISUAL=vim
+export EDITOR=$VISUAL
+
+# enable terminal linewrap
+setterm -linewrap on 2> /dev/null
+
+# colorize man pages
+export LESS_TERMCAP_mb=$'\e[1;32m'
+export LESS_TERMCAP_md=$'\e[1;32m'
+export LESS_TERMCAP_me=$'\e[0m'
+export LESS_TERMCAP_se=$'\e[0m'
+export LESS_TERMCAP_so=$'\e[01;33m'
+export LESS_TERMCAP_ue=$'\e[0m'
+export LESS_TERMCAP_us=$'\e[1;4;31m'
+export LESSHISTFILE=-
+
+# colorize ls
+[ -x /usr/bin/dircolors ] && eval "$(dircolors -b)"
+
+# if this is an xterm set the title to user@host:dir
+case "$TERM" in
+xterm*|rxvt*)
+	precmd() { print -Pnr -- $'\e]0;%n@%m: %~\a' }
+	;;
+esac
 
 # ------------------------------- ZSH PLUGINS ---------------------------------
 # Plugin source helper

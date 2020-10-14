@@ -39,6 +39,28 @@ command -v ytop > /dev/null && alias top='ytop -p $([ "$COLOR_SCHEME" = "light" 
 # themes for light/dark color-schemes inside ~/.config/bashtop; Press ESC to open the menu and change the theme
 command -v bashtop > /dev/null && alias top='bashtop'
 
+# --------------------------------- SETTINGS ----------------------------------
+shopt -s globstar
+shopt -s histappend
+shopt -s checkwinsize
+
+HISTCONTROL=ignoreboth
+HISTSIZE=5000
+HISTFILESIZE=5000
+HISTFILE="$HOME/.cache/bash_history"
+
+# Bash Completion
+if [ -f /usr/share/bash-completion/bash_completion ]
+then
+	source /usr/share/bash-completion/bash_completion
+elif [ -f /etc/bash_completion ]
+then
+	source /etc/bash_completion
+fi
+
+# Prompt
+PS1='\[\033[;32m\]┌──(\[\033[1;34m\]\u@\h\[\033[;32m\])-[\[\033[0;1m\]\w\[\033[;32m\]]\n\[\033[;32m\]└─\[\033[1;34m\]\$\[\033[0m\] '
+
 # ----------------------------------- MISC -----------------------------------
 export VISUAL=vim
 export EDITOR=$VISUAL
@@ -65,29 +87,6 @@ xterm*|rxvt*)
 	PS1="\[\e]0;\u@\h: \w\a\]$PS1"
 	;;
 esac
-
-# ------------------------------- BASH SETTINGS --------------------------------
-shopt -s globstar
-shopt -s histappend
-shopt -s checkwinsize
-
-HISTCONTROL=ignoreboth
-HISTSIZE=5000
-HISTFILESIZE=5000
-HISTFILE="$HOME/.cache/bash_history"
-
-# Bash Completion
-if [ -f /usr/share/bash-completion/bash_completion ]
-then
-	source /usr/share/bash-completion/bash_completion
-elif [ -f /etc/bash_completion ]
-then
-	source /etc/bash_completion
-fi
-
-# Prompt
-PS1='\[\033[;32m\]┌──(\[\033[1;34m\]\u@\h\[\033[;32m\])-[\[\033[0;1m\]\w\[\033[;32m\]]\n\[\033[;32m\]└─\[\033[1;34m\]\$\[\033[0m\] '
-
 
 # -------------------------------- FUNCTIONS ---------------------------------
 lazygit() {
