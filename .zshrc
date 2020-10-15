@@ -38,6 +38,7 @@ command -v gotop > /dev/null && alias top='gotop -p $([ "$COLOR_SCHEME" = "light
 command -v ytop > /dev/null && alias top='ytop -p $([ "$COLOR_SCHEME" = "light" ] && echo "-c default-dark")'
 # themes for light/dark color-schemes inside ~/.config/bashtop; Press ESC to open the menu and change the theme
 command -v bashtop > /dev/null && alias top='bashtop'
+command -v bpytop > /dev/null && alias top='bpytop'
 
 # --------------------------------- SETTINGS ----------------------------------
 setopt AUTO_CD
