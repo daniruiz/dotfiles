@@ -19,7 +19,6 @@ linux-firmware
 
 # ZSH & TERMINAL
 baobab
-bashtop
 bat
 chrome-gnome-shell
 eog
@@ -76,6 +75,7 @@ noto-fonts-emoji
 # ========== #
 #    AUR     #
 # ========== #
+bpytop
 flat-remix
 flat-remix-gnome
 flat-remix-gtk
