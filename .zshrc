@@ -18,7 +18,7 @@ alias ip='ip --color=auto'
 alias pacman='pacman --color=auto'
 
 ### LS & TREE
-alias ll='ls -l'
+alias ll='ls -la'
 alias la='ls -A'
 alias l='ls -F'
 command -v lsd > /dev/null && alias ls='lsd --group-dirs first' && \
