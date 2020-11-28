@@ -41,6 +41,7 @@ command -v batcat > /dev/null && \
 command -v htop > /dev/null && alias top='htop'
 command -v gotop > /dev/null && alias top='gotop -p $([ "$COLOR_SCHEME" = "light" ] && echo "-c default-dark")'
 command -v ytop > /dev/null && alias top='ytop -p $([ "$COLOR_SCHEME" = "light" ] && echo "-c default-dark")'
+command -v btm > /dev/null && alias top='btm $([ "$COLOR_SCHEME" = "light" ] && echo "--color default-light")'
 # themes for light/dark color-schemes inside ~/.config/bashtop; Press ESC to open the menu and change the theme
 command -v bashtop > /dev/null && alias top='bashtop'
 command -v bpytop > /dev/null && alias top='bpytop'
