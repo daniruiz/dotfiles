@@ -18,7 +18,7 @@ alias ip='ip --color=auto'
 alias pacman='pacman --color=auto'
 
 ### LS & TREE
-alias ll='ls -l'
+alias ll='ls -la'
 alias la='ls -A'
 alias l='ls -F'
 command -v lsd > /dev/null && alias ls='lsd --group-dirs first' && \
@@ -31,11 +31,17 @@ command -v bat > /dev/null && \
 	alias bat='bat --theme=ansi-$([ "$COLOR_SCHEME" = "light" ] && echo "light" || echo "dark")' && \
 	alias cat='bat --pager=never' && \
 	alias less='bat'
+# in debian the command is batcat
+command -v batcat > /dev/null && \
+	alias batcat='batcat --theme=ansi-$([ "$COLOR_SCHEME" = "light" ] && echo "light" || echo "dark")' && \
+	alias cat='batcat --pager=never' && \
+	alias less='batcat'
 
 ### TOP
 command -v htop > /dev/null && alias top='htop'
 command -v gotop > /dev/null && alias top='gotop -p $([ "$COLOR_SCHEME" = "light" ] && echo "-c default-dark")'
 command -v ytop > /dev/null && alias top='ytop -p $([ "$COLOR_SCHEME" = "light" ] && echo "-c default-dark")'
+command -v btm > /dev/null && alias top='btm $([ "$COLOR_SCHEME" = "light" ] && echo "--color default-light")'
 # themes for light/dark color-schemes inside ~/.config/bashtop; Press ESC to open the menu and change the theme
 command -v bashtop > /dev/null && alias top='bashtop'
 command -v bpytop > /dev/null && alias top='bpytop'
