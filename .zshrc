@@ -31,6 +31,11 @@ command -v bat > /dev/null && \
 	alias bat='bat --theme=ansi-$([ "$COLOR_SCHEME" = "light" ] && echo "light" || echo "dark")' && \
 	alias cat='bat --pager=never' && \
 	alias less='bat'
+# in debian the command is batcat
+command -v batcat > /dev/null && \
+	alias batcat='batcat --theme=ansi-$([ "$COLOR_SCHEME" = "light" ] && echo "light" || echo "dark")' && \
+	alias cat='batcat --pager=never' && \
+	alias less='batcat'
 
 ### TOP
 command -v htop > /dev/null && alias top='htop'
