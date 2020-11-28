@@ -192,6 +192,8 @@ then
 	ZSH_HIGHLIGHT_STYLES[cursor-matchingbracket]=standout
 fi
 
+unset -f _source_plugin
+
 # POWERLEVEL
 if ! [[ $(tty) = /dev/tty* ]]
 then
