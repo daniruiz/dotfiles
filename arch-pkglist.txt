@@ -16,10 +16,7 @@ linux
 linux-firmware
 
 # GNOME
-
-# ZSH & TERMINAL
 baobab
-bat
 chrome-gnome-shell
 eog
 ffmpegthumbnailer
@@ -53,17 +50,21 @@ gvfs-nfs
 gvfs-smb
 libgit2-glib
 lollypop
-lsd
-man-db
 nautilus
 networkmanager
 rygel
 sushi
 totem
-vim
-xclip
 xdg-user-dirs-gtk
 youtube-dl
+
+# ZSH & TERMINAL
+bat
+lsd
+man-db
+vim
+xclip
+zsh
 zsh-autosuggestions
 zsh-syntax-highlighting
 zsh-theme-powerlevel10k
