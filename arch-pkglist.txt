@@ -75,7 +75,7 @@ noto-fonts-emoji
 # ========== #
 #    AUR     #
 # ========== #
-bpytop
+bottom-bin
 flat-remix
 flat-remix-gnome
 flat-remix-gtk
