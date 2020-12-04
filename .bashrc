@@ -159,7 +159,7 @@ lazygit [OPTION]... <msg>
 glog() {
 	setterm -linewrap off 2> /dev/null
 
-	git --no-pager log --all --color=always --graph --abbrev-commit --decorate \
+	git --no-pager log --all --color=always --graph --abbrev-commit --decorate --date-order \
 	--format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' \
 		| sed -E \
 			-e 's/\|(\x1b\[[0-9;]*m)+\\(\x1b\[[0-9;]*m)+ /├\1─╮\2/' \
