@@ -5,6 +5,10 @@ COLOR_SCHEME=dark # dark/light
 
 # --------------------------------- ALIASES -----------------------------------
 alias ..='cd ..'
+alias cp='cp -iv'
+alias rm='rm -ir'
+alias mv='mv -iv'
+alias ln='ln -sriv'
 alias xclip='xclip -selection c'
 command -v vim > /dev/null && alias vi='vim'
 
