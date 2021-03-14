@@ -21,6 +21,7 @@ chrome-gnome-shell
 eog
 ffmpegthumbnailer
 file-roller
+flatpak
 gdm
 geary
 gedit
@@ -54,6 +55,7 @@ libgit2-glib
 nautilus
 networkmanager
 rygel
+seahorse
 sushi
 totem
 xdg-user-dirs-gtk
