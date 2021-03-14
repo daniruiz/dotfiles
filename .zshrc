@@ -89,6 +89,7 @@ zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 
 # Key bindings
+bindkey -v
 bindkey '^U' backward-kill-line
 bindkey '^[[2~' overwrite-mode
 bindkey '^[[3~' delete-char
