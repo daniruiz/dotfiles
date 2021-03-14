@@ -1,0 +1,29 @@
+QScrollBar { background: transparent; }
+
+QScrollBar:vertical { max-width: 8px; }
+QScrollBar:horizontal { max-height: 8px; }
+
+QScrollBar::handle {
+  padding: 0;
+  margin: 2px;
+  border-radius: 2px;
+  border: 0;
+  background: rgba(127, 127, 127, .5);
+  min-height: 20px;
+  min-width: 20px;
+}
+QScrollBar::handle:hover { background: rgba(127, 127, 127, 1); }
+QScrollBar::handle:pressed { background: palette(highlight); }
+
+QScrollBar::add-line , QScrollBar::sub-line {
+  height: 0;
+  border: 0;
+}
+
+QScrollBar::up-arrow, QScrollBar::down-arrow {
+  border: 0;
+  width: 0;
+  height: 0;
+}
+
+QScrollBar::add-page, QScrollBar::sub-page { background: none; }
