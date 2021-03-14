@@ -78,6 +78,8 @@ SAVEHIST=5000
 ZLE_RPROMPT_INDENT=0
 WORDCHARS=${WORDCHARS//\/}
 PROMPT_EOL_MARK=
+TIMEFMT=$'real\t%E\nuser\t%U\nsys\t%S\ncpu\t%P'
+
 
 # ZSH completion system
 autoload -Uz compinit
