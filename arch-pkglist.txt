@@ -11,6 +11,7 @@
 base
 base-devel
 dash
+efibootmgr
 grub
 linux
 linux-firmware
