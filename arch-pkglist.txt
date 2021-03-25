@@ -31,6 +31,7 @@ gnome-calculator
 gnome-calendar
 gnome-clocks
 gnome-documents
+gnome-disk-utility
 gnome-font-viewer
 gnome-keyring
 gnome-screenshot
