@@ -13,3 +13,7 @@
 	helper = cache --timeout=3600
 [pull]
 	rebase = true
+[core]
+	attributesfile = ~/.gitattributes
+[diff "image"]
+	command = compare $2 $1 png:- | montage -geometry +4+4 $2 - $1 png:- | display -title \"$1\" -
