@@ -13,6 +13,7 @@ base-devel
 dash
 efibootmgr
 grub
+haveged
 linux
 linux-firmware
 
@@ -30,8 +31,8 @@ gedit-plugins
 gnome-calculator
 gnome-calendar
 gnome-clocks
-gnome-documents
 gnome-disk-utility
+gnome-documents
 gnome-font-viewer
 gnome-keyring
 gnome-screenshot
