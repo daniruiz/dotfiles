@@ -71,7 +71,7 @@ setopt NUMERIC_GLOB_SORT
 setopt PROMPT_SUBST
 setopt SHARE_HISTORY
 
-HISTFILE="$HOME/.cache/zsh_history"
+HISTFILE=~/.zsh_history
 HIST_STAMPS=mm/dd/yyyy
 HISTSIZE=5000
 SAVEHIST=5000

@@ -58,7 +58,7 @@ shopt -s checkwinsize
 HISTCONTROL=ignoreboth
 HISTSIZE=5000
 HISTFILESIZE=5000
-HISTFILE="$HOME/.cache/bash_history"
+HISTFILE=~/.bash_history
 
 # Bash Completion
 if [ -f /usr/share/bash-completion/bash_completion ]
