@@ -6,7 +6,7 @@ COLOR_SCHEME=dark # dark/light
 # --------------------------------- ALIASES -----------------------------------
 #alias ..='cd ..'
 alias cp='cp -v'
-alias rm='rm -Ir'
+alias rm='rm -I'
 alias mv='mv -iv'
 alias ln='ln -sriv'
 alias xclip='xclip -selection c'
