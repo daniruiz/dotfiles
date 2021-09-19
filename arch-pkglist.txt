@@ -21,7 +21,6 @@ linux-firmware
 baobab
 chrome-gnome-shell
 eog
-ffmpegthumbnailer
 file-roller
 flatpak
 gdm
