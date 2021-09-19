@@ -64,6 +64,7 @@ xdg-user-dirs-gtk
 
 # ZSH & TERMINAL
 bat
+bottom
 lsd
 man-db
 vim
@@ -81,7 +82,6 @@ qt5ct
 # ========== #
 #    AUR     #
 # ========== #
-bottom-bin
 flat-remix
 flat-remix-gnome
 flat-remix-gtk
