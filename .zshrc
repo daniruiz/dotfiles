@@ -78,7 +78,7 @@ SAVEHIST=5000
 ZLE_RPROMPT_INDENT=0
 WORDCHARS=${WORDCHARS//\/}
 PROMPT_EOL_MARK=
-TIMEFMT=$'real\t%E\nuser\t%U\nsys\t%S\ncpu\t%P'
+TIMEFMT=$'\nreal\t%E\nuser\t%U\nsys\t%S\ncpu\t%P'
 
 
 # ZSH completion system
@@ -99,7 +99,7 @@ zstyle ':completion:*' verbose true
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
 # Key bindings
-bindkey -v
+bindkey -e
 bindkey '^U' backward-kill-line
 bindkey '^[[2~' overwrite-mode
 bindkey '^[[3~' delete-char
@@ -139,9 +139,9 @@ export LESSHISTFILE=-
 # colorize ls
 [ -x /usr/bin/dircolors ] && eval "$(dircolors -b)"
 
-# if this is an xterm set the title to user@host:dir
+# If this is an xterm set the title to user@host:dir
 case "$TERM" in
-xterm*|rxvt*)
+xterm*|rxvt*|Eterm|aterm|kterm|gnome*|alacritty)
 	precmd() { print -Pnr -- $'\e]0;%n@%m: %~\a' }
 	;;
 esac
