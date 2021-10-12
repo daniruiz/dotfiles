@@ -6,16 +6,16 @@ export COLOR_02="#D41919"           # Red
 export COLOR_03="#5EBDAB"           # Green
 export COLOR_04="#FEA44C"           # Yellow
 export COLOR_05="#367bf0"           # Blue
-export COLOR_06="#BF2E5D"           # Magenta
+export COLOR_06="#9755b3"           # Magenta
 export COLOR_07="#49AEE6"           # Cyan
 export COLOR_08="#E6E6E6"           # Light gray
 
-export COLOR_09="#8C42AB"           # Dark gray
+export COLOR_09="#198388"           # Dark gray
 export COLOR_10="#EC0101"           # Light Red
 export COLOR_11="#47D4B9"           # Light Green
 export COLOR_12="#FF8A18"           # Light Yellow
 export COLOR_13="#277FFF"           # Light Blue
-export COLOR_14="#D71655"           # Light Magenta
+export COLOR_14="#962ac3"           # Light Magenta
 export COLOR_15="#05A1F7"           # Light Cyan
 export COLOR_16="#FFFFFF"           # White
 
