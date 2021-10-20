@@ -19,7 +19,6 @@ linux-firmware
 
 # GNOME
 baobab
-chrome-gnome-shell
 eog
 file-roller
 flatpak
@@ -31,7 +30,6 @@ gnome-calculator
 gnome-calendar
 gnome-clocks
 gnome-disk-utility
-gnome-documents
 gnome-font-viewer
 gnome-keyring
 gnome-screenshot
@@ -82,6 +80,7 @@ qt5ct
 # ========== #
 #    AUR     #
 # ========== #
+chrome-gnome-shell
 flat-remix
 flat-remix-gnome
 flat-remix-gtk
