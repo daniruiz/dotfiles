@@ -1,3 +1,4 @@
 *.gif diff=image
 *.jpg diff=image
 *.png diff=image
+*.svg diff=image
