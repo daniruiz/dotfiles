@@ -69,6 +69,9 @@ then
 	source /etc/bash_completion
 fi
 
+# Add new line before prompt
+PROMPT_COMMAND="PROMPT_COMMAND=echo"
+
 # Prompt
 PS1='\[\033[;32m\]┌──(\[\033[1;34m\]\u@\h\[\033[;32m\])-[\[\033[0;1m\]\w\[\033[;32m\]]\n\[\033[;32m\]└─\[\033[1;34m\]\$\[\033[0m\] '
 
