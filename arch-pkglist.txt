@@ -13,7 +13,6 @@ base-devel
 dash
 efibootmgr
 grub
-haveged
 linux
 linux-firmware
 
