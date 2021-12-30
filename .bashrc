@@ -95,9 +95,9 @@ export LESSHISTFILE=-
 # colorize ls
 [ -x /usr/bin/dircolors ] && eval "$(dircolors -b)"
 
-# if this is an xterm set the title to user@host:dir
+# If this is an xterm set the title to user@host:dir
 case "$TERM" in
-xterm*|rxvt*)
+xterm*|rxvt*|Eterm|aterm|kterm|gnome*|alacritty)
 	PS1="\[\e]0;\u@\h: \w\a\]$PS1"
 	;;
 esac
