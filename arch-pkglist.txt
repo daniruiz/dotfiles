@@ -19,6 +19,7 @@ linux-firmware
 # GNOME
 baobab
 eog
+evince
 file-roller
 flatpak
 gdm
@@ -31,6 +32,7 @@ gnome-clocks
 gnome-disk-utility
 gnome-font-viewer
 gnome-keyring
+gnome-music
 gnome-screenshot
 gnome-shell
 gnome-shell-extensions
@@ -57,6 +59,7 @@ rygel
 seahorse
 sushi
 totem
+xdg-desktop-portal-gnome
 xdg-user-dirs-gtk
 
 # ZSH & TERMINAL
@@ -64,6 +67,7 @@ bat
 bottom
 lsd
 man-db
+mlocate
 vim
 xclip
 zsh
@@ -73,13 +77,17 @@ zsh-theme-powerlevel10k
 
 # OTHER
 firefox
+jack2
+noto-fonts
 noto-fonts-emoji
+pipewire-media-session
 qt5ct
 
 # ========== #
 #    AUR     #
 # ========== #
 chrome-gnome-shell
+dashbinsh
 flat-remix
 flat-remix-gnome
 flat-remix-gtk
