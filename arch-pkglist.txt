@@ -33,7 +33,6 @@ gnome-disk-utility
 gnome-font-viewer
 gnome-keyring
 gnome-music
-gnome-screenshot
 gnome-shell
 gnome-shell-extensions
 gnome-software
