@@ -90,5 +90,6 @@ dashbinsh
 flat-remix
 flat-remix-gnome
 flat-remix-gtk
+mutter-rounded
 nerd-fonts-fira-code
 yay
