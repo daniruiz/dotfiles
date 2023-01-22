@@ -78,6 +78,7 @@ zsh-theme-powerlevel10k
 firefox
 jack2
 noto-fonts
+noto-fonts-extra
 noto-fonts-cjk
 noto-fonts-emoji
 pipewire-media-session
