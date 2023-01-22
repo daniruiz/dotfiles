@@ -78,9 +78,10 @@ zsh-theme-powerlevel10k
 firefox
 jack2
 noto-fonts
-noto-fonts-extra
 noto-fonts-cjk
 noto-fonts-emoji
+noto-fonts-extra
+ttf-firacode-nerd
 pipewire-media-session
 qt5ct
 
@@ -93,5 +94,4 @@ flat-remix-gnome
 flat-remix-gtk
 gnome-browser-connector
 mutter-rounded
-nerd-fonts-fira-code
 yay
