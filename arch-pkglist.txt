@@ -87,7 +87,7 @@ qt5ct
 # ========== #
 #    AUR     #
 # ========== #
-chrome-gnome-shell
+gnome-browser-connector
 dashbinsh
 flat-remix
 flat-remix-gnome
