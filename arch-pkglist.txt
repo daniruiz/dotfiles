@@ -87,11 +87,11 @@ qt5ct
 # ========== #
 #    AUR     #
 # ========== #
-gnome-browser-connector
 dashbinsh
 flat-remix
 flat-remix-gnome
 flat-remix-gtk
+gnome-browser-connector
 mutter-rounded
 nerd-fonts-fira-code
 yay
