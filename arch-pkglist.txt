@@ -29,6 +29,7 @@ gedit-plugins
 gnome-calculator
 gnome-calendar
 gnome-clocks
+gnome-control-center
 gnome-disk-utility
 gnome-font-viewer
 gnome-keyring
