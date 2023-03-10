@@ -76,6 +76,7 @@ zsh-syntax-highlighting
 zsh-theme-powerlevel10k
 
 # OTHER
+git-delta
 firefox
 jack2
 noto-fonts
