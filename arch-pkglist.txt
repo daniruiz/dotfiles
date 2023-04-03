@@ -68,7 +68,9 @@ bottom
 lsd
 man-db
 mlocate
+openbsd-netcat
 vim
+wget
 xclip
 zsh
 zsh-autosuggestions
