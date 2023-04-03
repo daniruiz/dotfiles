@@ -81,6 +81,7 @@ zsh-theme-powerlevel10k
 git-delta
 firefox
 jack2
+ntfs-3g
 noto-fonts
 noto-fonts-cjk
 noto-fonts-emoji
@@ -88,6 +89,7 @@ noto-fonts-extra
 ttf-firacode-nerd
 pipewire-media-session
 qt5ct
+unrar
 
 # ========== #
 #    AUR     #
