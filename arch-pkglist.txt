@@ -78,18 +78,20 @@ zsh-syntax-highlighting
 zsh-theme-powerlevel10k
 
 # OTHER
-git-delta
 firefox
+git-delta
 jack2
 ntfs-3g
+pipewire-media-session
+qt5ct
+unrar
+
+# Fonts
 noto-fonts
 noto-fonts-cjk
 noto-fonts-emoji
 noto-fonts-extra
 ttf-firacode-nerd
-pipewire-media-session
-qt5ct
-unrar
 
 # ========== #
 #    AUR     #
@@ -101,3 +103,4 @@ flat-remix-gtk
 gnome-browser-connector
 mutter-rounded
 yay
+
