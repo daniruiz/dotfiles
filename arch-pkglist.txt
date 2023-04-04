@@ -3,7 +3,7 @@
 # * Get manually installed packages:
 #   $ comm <(pacman -Qettq | sort) <(pacman -Qgq base-devel | sort) -23
 # * Show manually installed packages not in this list
-#   $ comm <(cat arch-pkglist.txt | grep -v '^#' | sort) <(comm <(pacman -Qettq | sort) <(pacman -Qgq base-devel | sort) -23) -13
+#   $ comm <(grep -v '^#' arch-pkglist.txt | sort) <(comm <(pacman -Qettq | sort) <(pacman -Qgq base-devel | sort) -23) -13
 # * Install all packages (you need yay installed)
 #   $ yay -S $(grep -v '^#' arch-pkglist.txt | xargs)
 
@@ -82,9 +82,9 @@ firefox
 git-delta
 jack2
 ntfs-3g
-pipewire-media-session
 qt5ct
 unrar
+wireplumber
 
 # Fonts
 noto-fonts
