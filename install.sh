@@ -12,3 +12,5 @@ grep -q QT_QPA_PLATFORMTHEME=qt5ct /etc/environment \
   || echo QT_QPA_PLATFORMTHEME=qt5ct | sudo tee -a /etc/environment
 
 sudo cp -rv .local/share/qt5ct /usr/share
+
+sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
