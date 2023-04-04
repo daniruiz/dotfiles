@@ -22,6 +22,7 @@ eog
 evince
 file-roller
 flatpak
+fwupd
 gdm
 geary
 gedit
