@@ -15,6 +15,16 @@ command -v vim > /dev/null && alias vi='vim'
 # Shortcut to update my Arch Linux setup
 # alias update='yay -Syyu --answerupgrade None --answerclean All --answerdiff None --overwrite="*" flat-remix-gnome && sudo pacman -Rscn $(pacman -Qdqtt) 2>/dev/null; flatpak update && flatpak remove --unused'
 
+# Shortcut to update my Debian/Kali setup
+#alias update='sudo sh -c "
+#  set -e
+#  export DEBIAN_FRONTEND=noninteractive
+#  dpkg --configure -a
+#  apt update
+#  apt -y --fix-broken --fix-missing full-upgrade
+#  apt -y autoremove --purge
+#"'
+
 ### Colorize commands
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
