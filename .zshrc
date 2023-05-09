@@ -12,6 +12,9 @@ alias ln='ln -sriv'
 alias xclip='xclip -selection c'
 command -v vim > /dev/null && alias vi='vim'
 
+# Shortcut to update my Arch Linux setup
+# alias update='yay -Syyu --answerupgrade None --answerclean All --answerdiff None --overwrite="*" flat-remix-gnome && sudo pacman -Rscn $(pacman -Qdqtt) 2>/dev/null; flatpak update && flatpak remove --unused'
+
 ### Colorize commands
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
