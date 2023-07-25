@@ -39,7 +39,6 @@ gnome-shell
 gnome-shell-extensions
 gnome-software
 gnome-software-packagekit-plugin
-gnome-system-monitor
 gnome-terminal
 gnome-tweaks
 gnome-user-share
@@ -102,6 +101,7 @@ flat-remix
 flat-remix-gnome
 flat-remix-gtk
 gnome-browser-connector
+mission-center
 mutter-rounded
 yay
 
