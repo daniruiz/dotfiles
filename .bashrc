@@ -31,6 +31,7 @@ command -v apt > /dev/null && update() {
 		apt update
 		apt -y --fix-broken --fix-missing full-upgrade
 		apt -y autoremove --purge
+		apt clean
 	"
 }
 
