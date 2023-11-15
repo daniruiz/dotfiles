@@ -37,7 +37,6 @@ gnome-music
 gnome-shell
 gnome-shell-extensions
 gnome-software
-gnome-software-packagekit-plugin
 gnome-terminal
 gnome-tweaks
 gnome-user-share
