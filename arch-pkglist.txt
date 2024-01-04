@@ -98,9 +98,7 @@ ttf-firacode-nerd
 dashbinsh
 flat-remix
 flat-remix-gnome
-flat-remix-gtk
 gnome-browser-connector
 mission-center
-mutter-rounded
 yay
 
