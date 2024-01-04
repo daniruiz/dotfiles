@@ -42,7 +42,6 @@ gnome-tweaks
 gnome-user-share
 gnome-weather
 grilo-plugins
-gst-libav
 gvfs-afc
 gvfs-goa
 gvfs-google
