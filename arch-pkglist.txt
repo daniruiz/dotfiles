@@ -55,8 +55,8 @@ nautilus
 networkmanager
 rygel
 seahorse
+showtime
 sushi
-totem
 xdg-desktop-portal-gnome
 xdg-user-dirs-gtk
 
