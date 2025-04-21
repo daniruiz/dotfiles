@@ -18,7 +18,6 @@ linux-firmware
 
 # GNOME
 baobab
-evince
 file-roller
 flatpak
 fwupd
@@ -51,6 +50,7 @@ gvfs-nfs
 gvfs-smb
 libgit2-glib
 loupe
+papers
 nautilus
 networkmanager
 rygel
