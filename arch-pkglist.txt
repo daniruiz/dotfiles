@@ -23,8 +23,6 @@ flatpak
 fwupd
 gdm
 geary
-gedit
-gedit-plugins
 gnome-calculator
 gnome-calendar
 gnome-clocks
@@ -37,6 +35,7 @@ gnome-shell
 gnome-shell-extensions
 gnome-software
 gnome-terminal
+gnome-text-editor
 gnome-tweaks
 gnome-user-share
 gnome-weather
