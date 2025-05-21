@@ -49,9 +49,10 @@ gvfs-nfs
 gvfs-smb
 libgit2-glib
 loupe
-papers
+mission-center
 nautilus
 networkmanager
+papers
 rygel
 seahorse
 showtime
@@ -97,6 +98,5 @@ dashbinsh
 flat-remix
 flat-remix-gnome
 gnome-browser-connector
-mission-center
 yay
 
