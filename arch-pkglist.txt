@@ -76,7 +76,6 @@ zsh-syntax-highlighting
 zsh-theme-powerlevel10k
 
 # OTHER
-firefox
 git-delta
 jack2
 ntfs-3g
@@ -94,6 +93,7 @@ ttf-firacode-nerd
 # ========== #
 #    AUR     #
 # ========== #
+chrome
 dashbinsh
 flat-remix
 flat-remix-gnome
