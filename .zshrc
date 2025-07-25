@@ -183,7 +183,7 @@ _source_plugin() {
 }
 
 # ZSH Autosuggestions
-_source_plugin zsh-autosuggestions && ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#999'
+_source_plugin zsh-autosuggestions && ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=244'
 
 # ZSH Syntax Highlighting
 if _source_plugin zsh-syntax-highlighting
