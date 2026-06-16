@@ -93,8 +93,6 @@ ttf-firacode-nerd
 # ========== #
 #    AUR     #
 # ========== #
-chrome
-dashbinsh
 flat-remix
 flat-remix-gnome
 gnome-browser-connector
